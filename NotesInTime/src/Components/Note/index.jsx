@@ -3,7 +3,7 @@ import './Note.css'
 
 import { FaTrash } from "react-icons/fa"
 
-function Note({ id, text, date, time}) {
+function Note({ id, text, date, time, handleDeleteNote }) {
     return (
         <div className="note">
             <div className="note-content">
@@ -15,7 +15,7 @@ function Note({ id, text, date, time}) {
                     
                 </div>
                 <div className="note-actions">
-                <FaTrash className="delete-icon" />
+                <FaTrash className="delete-icon" onClick={() => handleDeleteNote(id)} />
                 </div>
             </div>
         </div>
