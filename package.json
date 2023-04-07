@@ -1,5 +1,9 @@
 {
   "dependencies": {
-    "react-icons": "^4.8.0"
+    "@material-ui/core": "^4.12.4",
+    "@material-ui/icons": "^4.11.3",
+    "emoji-picker-react": "^4.4.8",
+    "react-icons": "^4.8.0",
+    "react-input-emoji": "^5.0.2"
   }
 }

@@ -2,47 +2,56 @@ import React from 'react'
 
 import { useState } from 'react';
 
+import InputEmoji from "react-input-emoji";
+
 import './AddNote.css'
 
 function AddNote({ handleAddNote }) {
 
-  const [noteText, setNoteText] = useState('');
+    const [noteText, setNoteText] = useState('');
 
 
-  const handleChange = (event) => {
-    
+    const handleChange = (event) => {
+
         setNoteText(event.target.value);
-   
-};
+
+    };
 
 
 
-  const handleSaveClick = () => {
-    if (noteText.trim().length > 0) {
-        handleAddNote(noteText);
-        setNoteText('');
+    const handleSaveClick = () => {
+        if (noteText.trim().length > 0) {
+            handleAddNote(noteText);
+            setNoteText('');
+        }
+    };
+
+    function handleOnEnter(text) {
+        console.log("enter", text);
     }
-};
-  
 
-  return (
-    <div className="new-note">
+
+    return (
+        <div className="new-note">
             <div className="note-content">
-            <textarea className='new-note-text'
-				rows='8'
-				cols='10'
-				placeholder='Escreva sua nota...'
-				value={noteText}
-				onChange={handleChange}></textarea>
+                <InputEmoji
+                    className='form-control new-note-text'
+                    value={noteText}
+                    onChange={setNoteText}
+                    cleanOnEnter
+                    onEnter={handleOnEnter}
+                    placeholder="Escreva sua nota..."
+                />
                 
+
                 <div className="note-actions">
-                <button className='save-button' onClick={handleSaveClick}>
-					Salvar
-				</button>
+                    <button className='save-button' onClick={handleSaveClick}>
+                        Salvar
+                    </button>
                 </div>
             </div>
         </div>
-  )
+    )
 }
 
 export default AddNote
