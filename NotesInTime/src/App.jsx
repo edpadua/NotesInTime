@@ -65,14 +65,17 @@ function App() {
 	}, [notes]);
 
   const addNote = (text) => {
+    const locale = 'en';
 		const date = new Date();
+    const hour = date.getHours();
+    const time = date.toLocaleTimeString(locale, { hour: 'numeric', hour12: true, minute: 'numeric', second: 'numeric' });
+
+ 
 		const newNote = {
 			id: nanoid(),
 			text: text,
 			date: date.toLocaleDateString(),
-      time:   date.getHours() 
-      + ':' + date.getMinutes() 
-      + ":" + date.getSeconds(),
+      time: time,
 		};
 		const newNotes = [...notes, newNote];
 		setNotes(newNotes);
