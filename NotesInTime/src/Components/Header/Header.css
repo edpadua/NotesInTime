@@ -1,0 +1,35 @@
+header {
+    
+    right: 0px;
+    top: 0px;
+    height: 80px;
+    width: 100%;
+    background-color: #0014dc;
+    position: fixed;
+    box-shadow: 0 1px 6px rgba(32, 33, 36, .28);
+}
+
+.navbar{
+    color:#ffffff;
+    padding-top: 24px;
+}
+
+.navbar-container {
+    -webkit-box-align: center;
+    align-items: center;
+    background-color: transparent;
+    display: flex;
+    flex-flow: row nowrap;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    display: flex;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+    
+  }
+
+  .logo-header{
+    top:20px;
+  }

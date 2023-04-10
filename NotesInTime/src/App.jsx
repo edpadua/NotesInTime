@@ -4,6 +4,7 @@ import viteLogo from '/vite.svg'
 import { nanoid } from 'nanoid';
 import './App.css'
 import NoteList from './Components/NoteList'
+import Header from './Components/Header';
 
 
 function App() {
@@ -12,27 +13,27 @@ function App() {
   const [notes, setNotes] = useState([
 		{
 			id: nanoid(),
-			text: 'This is my first note!',
-			date: '15/04/2021',
+			text: 'Esta é a minha primeira nota',
+			date: '01/04/2023',
       time: '12:00'
 		},
 		{
 			id: nanoid(),
-			text: 'This is my second note!',
-			date: '21/04/2021',
+			text: 'Esta é a minha segunda nota',
+			date: '04/04/2023',
       time:'15:30'
 		},
 		{
 			id: nanoid(),
-			text: 'This is my third note!',
-			date: '28/04/2021',
+			text: 'Esta é a minha terceira nota',
+			date: '09/04/2023',
       time: '10:15'
 		},
 		{
 			id: nanoid(),
-			text: 'This is my new note!',
-			date: '30/04/2021',
-      time: '14:15'
+			text: 'Esta é minha nova nota',
+			date: '10/04/2021',
+      time: '14:00'
 		},
 	]);
 
@@ -90,7 +91,7 @@ function App() {
 
   return (
     <div className="App">
-       
+           <Header/>
            <NoteList notes={notes} handleAddNote={addNote} handleDeleteNote={deleteNote}/>
       
         

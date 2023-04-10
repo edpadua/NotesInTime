@@ -1,7 +1,7 @@
 import React from 'react'
 import './Note.css'
 
-import { FaTrash } from "react-icons/fa"
+import { FaTrash, FaClock } from "react-icons/fa"
 
 function Note({ id, text, date, time, handleDeleteNote }) {
     return (
@@ -11,7 +11,7 @@ function Note({ id, text, date, time, handleDeleteNote }) {
                     <p>{text}</p>
                 </div>
                 <div className="info-note">
-                    <p>{date} - {time}</p>
+                    <FaClock/>&nbsp;<p>{date} - {time}</p>
                     
                 </div>
                 <div className="note-actions">
