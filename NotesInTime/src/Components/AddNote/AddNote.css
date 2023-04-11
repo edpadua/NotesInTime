@@ -81,3 +81,7 @@ input[type="file"] {
     cursor: pointer;
     height: auto;
 }
+
+.img-preview{
+    width: 20%;
+}

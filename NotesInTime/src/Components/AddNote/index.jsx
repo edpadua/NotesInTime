@@ -26,7 +26,7 @@ function AddNote({ handleAddNote }) {
         if (noteText.trim().length > 0) {
             handleAddNote(noteText, file);
             setNoteText('');
-            setFile('');
+            setFile();
         }
 
     };
@@ -36,8 +36,10 @@ function AddNote({ handleAddNote }) {
     }
 
     function handleChangeFile(e) {
-        console.log(e.target.files);
+        console.log("arquivo de imagem",e.target.files);
         setFile(URL.createObjectURL(e.target.files[0]));
+        e.target.value = null;
+        console.log("arquivo de imagem",e.target.files);
     }
 
     return (
@@ -54,8 +56,11 @@ function AddNote({ handleAddNote }) {
                     />
                     <label className="uploadLabel" for="arquivo"><BiImageAdd size={24} className='uploadImage' /></label>
                     <input type="file" name="arquivo" id="arquivo" onChange={handleChangeFile} accept="image/*" />
+                    
                 </div>
-
+                <div>
+                {file ? <img className="img-preview" src={file} />:(<></>)}
+                </div>
 
 
 
