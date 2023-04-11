@@ -12,6 +12,7 @@ function NoteList({notes, handleAddNote, handleDeleteNote}) {
 				<Note key={note.id}
 					id={note.id}
 					text={note.text}
+          imgurl={note.imgurl}
 					date={note.date}
 					time={note.time}
                     handleDeleteNote={handleDeleteNote}

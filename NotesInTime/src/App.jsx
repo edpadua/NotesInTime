@@ -65,7 +65,7 @@ function App() {
 		);
 	}, [notes]);
 
-  const addNote = (text) => {
+  const addNote = (text,imgurl) => {
     const locale = 'en';
 		const date = new Date();
     const hour = date.getHours();
@@ -75,8 +75,9 @@ function App() {
 		const newNote = {
 			id: nanoid(),
 			text: text,
+			imgurl: imgurl,
 			date: date.toLocaleDateString(),
-      time: time,
+            time: time,
 		};
 		const newNotes = [...notes, newNote];
 		setNotes(newNotes);

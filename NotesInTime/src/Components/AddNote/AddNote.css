@@ -59,3 +59,25 @@
 .save-button:hover{
     background-color: #051194;
 }
+
+input[type="file"] {
+    display: none;
+}
+
+
+.inputData{
+
+    display: flex;
+}
+
+.uploadLabel{
+    display: flex;
+}
+
+.uploadImage{
+    height: 24 !important;
+    width: 24 !important;
+    fill: #858585;
+    cursor: pointer;
+    height: auto;
+}

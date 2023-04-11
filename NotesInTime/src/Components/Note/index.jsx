@@ -3,12 +3,15 @@ import './Note.css'
 
 import { FaTrash, FaClock } from "react-icons/fa"
 
-function Note({ id, text, date, time, handleDeleteNote }) {
+function Note({ id, text, imgurl,date, time, handleDeleteNote }) {
     return (
         <div className="note">
             <div className="note-content">
                 <div className="text-note">
                     <p>{text}</p>
+                </div>
+                <div>
+                <img src={imgurl} />
                 </div>
                 <div className="info-note">
                     <FaClock/>&nbsp;<p>{date} - {time}</p>
