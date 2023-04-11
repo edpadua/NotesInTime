@@ -10,6 +10,8 @@
 - [Demo](#-demo)
 - [Technologies](#technologies)
 - [Setup](#setup)
+- [License](#license)
+- [Contact](#contact)
  
 ## About
 
@@ -33,3 +35,14 @@ cd notesintime
 npm i
 npm run dev
 ```
+
+## License
+
+Distributed under the MIT License. See `LICENSE.txt` for more information.
+
+
+## Contact
+
+Eduardo de Pádua: ed.padua@gmail.com
+
+Project Link: [https://github.com/edpadua/NotesInTime/](https://github.com/edpadua/NotesInTime)
