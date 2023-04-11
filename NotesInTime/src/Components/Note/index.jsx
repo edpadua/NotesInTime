@@ -11,7 +11,7 @@ function Note({ id, text, imgurl,date, time, handleDeleteNote }) {
                     <p>{text}</p>
                 </div>
                 <div>
-                <img src={imgurl} />
+                <img className="img-note" src={imgurl} />
                 </div>
                 <div className="info-note">
                     <FaClock/>&nbsp;<p>{date} - {time}</p>
